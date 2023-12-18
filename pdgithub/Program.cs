@@ -22,6 +22,10 @@ namespace pdgithub
             int minimum = FindMinimum();
             Console.WriteLine($"A lista legkisebb eleme: {minimum}");
 
+            Console.WriteLine("5. Feladat: Maximum kiválasztása és kiírása");
+            int maximum = FindMaximum();
+            Console.WriteLine($"A lista legnagyobb eleme: {maximum}");
+
             Console.ReadKey(); // Ez itt helyezkedik el a Main metódusban
         }
 
@@ -67,5 +71,23 @@ namespace pdgithub
             return minimum;
         }
 
+        private static int FindMaximum()
+        {
+            if (numbers.Count == 0)
+            {
+                return 0; // Vagy más érték, ha nincs maximum, itt most 0-t adunk vissza
+            }
+
+            int maximum = numbers[0];
+            for (int i = 1; i < numbers.Count; i++)
+            {
+                if (numbers[i] > maximum)
+                {
+                    maximum = numbers[i];
+                }
+            }
+
+            return maximum;
+        }
     }
 }
