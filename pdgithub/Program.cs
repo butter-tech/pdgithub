@@ -15,6 +15,9 @@ namespace pdgithub
             Console.WriteLine("2. Feladat: Számok hozzáadása (0 végjelig)");
             AddNumbers();
 
+            Console.WriteLine("3. Feladat: Lista elemeinek kiírása");
+            PrintNumbers();
+
 
             Console.ReadKey(); // Ez itt helyezkedik el a Main metódusban
         }
@@ -37,5 +40,11 @@ namespace pdgithub
             } while (number != 0);
         }
 
+        private static void PrintNumbers()
+        {
+            Console.WriteLine($"Lista elemei: {string.Join(", ", numbers)}");
+        }
+
+       
     }
 }
